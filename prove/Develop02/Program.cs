@@ -6,6 +6,7 @@ class Program
     {
         Prompt _prompt = new Prompt();
         Entry _entry = new Entry();
+        FileManager _fileManager = new FileManager();
 
         Console.WriteLine("\nWelcome to the Journal program!");
         
@@ -40,19 +41,15 @@ class Program
                 case "L":
                     Console.WriteLine("What file would you like to load?");
                     string fileNameLoad = Console.ReadLine() ?? String.Empty;
-                    
+                    _fileManager.fileLoad(fileNameLoad);
                     break;
                 case "S":
                     Console.WriteLine("What file would you like to save?");
                     string fileNameSave = Console.ReadLine() ?? String.Empty;
-                    
+                    _fileManager.fileSave(fileNameSave);
                     break;
             }
             response = "";
         }
-
-
-
-
     }
 }
