@@ -29,17 +29,15 @@ class ReflectingActivity : Activity
         Console.WriteLine("\nWhen you have something in mind, press enter to continue. \n");
         Console.ReadLine();
 
-        Console.Write("Now ponder on each of the following questions as they relate to this experience.\nYou may begin in: 5");
-        Thread.Sleep(1000);
-        Console.Write("\b4");
-        Thread.Sleep(1000);
-        Console.Write("\b3");
-        Thread.Sleep(1000);
-        Console.Write("\b2");
-        Thread.Sleep(1000);
-        Console.Write("\b1");
-        Thread.Sleep(1000);
+        Console.Write("Now ponder on each of the following questions as they relate to this experience.\nYou may begin in: ");
+        Counter(5);
         Console.Clear();
-        
+
+        Console.WriteLine($" > {questions[randomNumber]} ");
+        Pause(5);
+        Console.WriteLine($" > {questions[randomNumber + 4]} ");
+        Pause(5);
+
+        EndMessage();
     }
 }

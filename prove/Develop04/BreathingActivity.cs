@@ -12,25 +12,15 @@ class BreathingActivity : Activity
         while (i <= totalActivities)
         {
             Console.Write("\nBreath in...    ");
-            Console.Write("\b3");
-            Thread.Sleep(1000);
-            Console.Write("\b2");
-            Thread.Sleep(1000);
-            Console.Write("\b1");
-            Thread.Sleep(1000);
+            Counter(3);
             Console.Clear();
-            Console.Write("\nBreath out...    ");
-            Console.Write("\b3");
-            Thread.Sleep(1000);
-            Console.Write("\b2");
-            Thread.Sleep(1000);
-            Console.Write("\b1");
-            Thread.Sleep(1000);
+            Console.Write("\nBreath out...   ");
+            Counter(3);
             Console.Clear();
 
-            i+=1;
+            i++;
         }
-        Console.WriteLine(GetEndMessage());
-        Pause();
+        
+        EndMessage();
     }
 }

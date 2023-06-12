@@ -15,6 +15,19 @@ class Activity
         spinner.Add("\\");
     }
 
+    public void Counter(int time)
+    {
+        int i = 0;
+
+        while (i != time)
+        {
+            Console.Write($"\b\b {time-i}");
+            Thread.Sleep(1000);
+            i++;
+        }
+        Console.Write("\b");
+    }
+
     public void DisplayTransScreen()
     {
         Console.Clear();
@@ -26,25 +39,25 @@ class Activity
 
         Console.Clear();
         Console.WriteLine("Get ready...");
-        Pause();
+        Pause(2);
     }
 
-    public void Pause()
+    public void Pause(int time)
     {
         int i = 0;
         int z = 0;
 
-        while (i != 2)
+        while (i != time)
         {
             while (z <= 3)
             {
                 Console.Write(spinner[z]);
                 Thread.Sleep(333);
                 Console.Write("\b");
-                z += 1;
+                z++;
             }
             z = 0;
-            i += 1;
+            i++;
         }
         Console.Clear();
     }
@@ -54,9 +67,12 @@ class Activity
         return _startMessage;
     }
 
-    public string GetEndMessage()
+    public void EndMessage()
     {
-        return $"Well Done!!\nYou have completed another {_duration} seconds of the {_activity} Activity.";
+        Console.WriteLine("Well done!!");
+        Pause(2);
+        Console.WriteLine($"You have completed another {_duration} seconds of the {_activity} Activity.");
+        Pause(3);
     }
 
     public void SetDuration(int duration)
