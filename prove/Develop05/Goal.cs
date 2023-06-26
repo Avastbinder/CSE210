@@ -3,27 +3,32 @@ abstract class Goal
     private string _goalType;
     private string _goalName;
     private string _goalDesc;
-    private int _pointWorth;
-    private bool _isComplete;
+    protected bool _isComplete;
 
     public Goal(string goalType, string goalName, string goalDesc, int pointWorth, bool isComplete)
     {
         _goalType = goalType;
         _goalName = goalName;
         _goalDesc = goalDesc;
-        _pointWorth = pointWorth;
         _isComplete = isComplete;
     }
 
     public abstract void Completed();
     public abstract string GetListEnding();
+    public abstract int RewardPoints();
+    public abstract string GetGoalSave();
 
     public string GetGoalType()
     {
         return _goalType;
     }
 
-    public string GetComplete()
+    public bool GetCompleted()
+    {
+        return _isComplete;
+    }
+
+    public string GetCompleteString()
     {
         if (_isComplete == true)
         {
@@ -43,11 +48,6 @@ abstract class Goal
     public string GetGoalDesc()
     {
         return _goalDesc;
-    }
-
-    public void RewardPoints()
-    {
-        _pointWorth += totalPoints;
     }
     
 }

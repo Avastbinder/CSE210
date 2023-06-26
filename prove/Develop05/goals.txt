@@ -1,0 +1,5 @@
+0
+Simple,Complete assignment,Complete religion assignment,100,False,0,0,0
+Eternal,Read,Read 10 pages,50,False,0,0,0
+Eternal,Excercise,Excercise 30 minutes a day,50,False,0,0,0
+Checklist,Work on project,work on project for 5 days,25,False,5,0,1000
