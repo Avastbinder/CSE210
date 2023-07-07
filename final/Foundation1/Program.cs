@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
         List<Video> videos = new List<Video>();
 
         Video video1 = new Video("House tour!!", "Mclovin", 1306);
@@ -31,5 +32,6 @@ class Program
             Console.WriteLine(video.GetVideoInfo());
             video.DisplayCommentInfo();
         }
+        Console.WriteLine("------------");
     }
 }
