@@ -2,9 +2,9 @@ class Product
 {
     private string _name;
     private string _prodID;
-    private float _price;
+    private double _price;
     private int _quantity;
-    public Product(string name, string prodID, float price, int quantity)
+    public Product(string name, string prodID, double price, int quantity)
     {
         _name = name;
         _prodID = prodID;
@@ -14,7 +14,7 @@ class Product
 
     public double GetPrice()
     {
-        return Math.Round((_price * _quantity), 2);
+        return _price * _quantity;
     }
 
     public string GetName()
